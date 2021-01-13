@@ -1,22 +1,82 @@
-# Bangladesh GEOJSON
+# Bangladesh Locality API
 
-### Divisions
-* Division name in English
-* Division name in Bangla
-* Division Latitude and Longitude
+[![Star IT Ltd](https://staritltd.com/wp-content/uploads/2019/10/Web_Logo_of_Star_IT_158x80.png)](https://staritltd.com)
 
-### Districts
-* District mapped with Divisions
-* District name in English
-* District name in Bangla
-* District Latitude and Longitude
+🔥 An Isomorphic Locality API to retrive Post Office, Sub District, District & Division of Bangladesh. Works on node, react-native & browsers. 🔥
 
-### Upazilas
-* Upazila mapped with Districts
-* Upazila name in Bangla
-* Upazila name in English
-* Upazila Latitude and Longitude
+## Installation & Usage
 
-### Post Office and Post Code
-* Post Office
-* Post Code
+### For node/react-native
+
+Install with your favorite package manager.
+
+Using Yarn:
+
+```
+yarn add bangladesh-locality-api
+```
+
+Using NPM:
+
+```
+npm i bangladesh-locality-api
+```
+
+Now import with ESM or CommonJS Syntax:
+
+#### Using Named Exports
+
+```typescript
+import { division } from 'bangladesh-locality-api';
+```
+
+#### Using Default Exports
+
+```typescript
+import BDApi from 'bangladesh-locality-api';
+```
+
+### For Browser
+
+Add a script tag with the umd bundle from unpkg or release page.
+
+```html
+<script src="https://unpkg.com/bangladesh-locality-api"></script>
+```
+
+Now you will have `BDApi` global in the window object.
+
+## Example
+
+```typescript
+import BDApi from 'bangladesh-locality-api';
+
+const main = async () => {
+  try {
+    const districts = await BDApi.districts('Dhaka');
+    console.log(districts);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+main();
+```
+
+## API
+
+```typescript
+// To be decided.
+```
+
+## License
+
+This package is licensed under the MIT License.
+
+## Contribution
+
+Any kind of contribution is welcome. Thanks!
+
+## Disclaimer
+
+All APIS OF THIS PACKAGE ARE CONSIDERED UNSTABLE ACROSS VERSION UNTILL 1.0.
